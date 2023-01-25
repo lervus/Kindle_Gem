@@ -1,0 +1,73 @@
+/*setting the size of the game*/
+.gameElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1280px;
+    height: 896px;
+}
+
+/*setting background image*/
+#background {
+    background: url("../images/cave_scale.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* making sure the image is scaling correctly*/
+#gameContainer {
+    position: relative;
+    transform: translate(calc((100vw - 1280px)/2), calc((100vh - 896px)/2));
+}
+
+/* making sure the HTML body is scaling correctly*/
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#rules {
+    font-size: large;
+    color: aquamarine;
+    width: 300px;
+    height: auto;
+    display: block;
+    border: 0px;
+    padding: 0px;
+    margin: 0 0 0 10px;
+}
+
+/* for image rendering optimization---optional--- courtesy of Felix Teutsch */
+#canvas {
+    image-rendering: optimizeSpeed;
+    /*Older versions of FF*/
+    image-rendering: -moz-crisp-edges;
+    /* FF 6.0+*/
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non standard naming)*/
+    image-rendering: -o-crisp-edges;
+    /* OS X & Windows Opera (12.02+)*/
+    image-rendering: crisp-edges;
+    /* Possible future browsers.*/
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE (non standard naming)*/
+}
+
+#scoreText, #staminaText {
+    display: none;
+}
+
+#gameOver {
+    display: none;
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

@@ -1,0 +1,67 @@
+<!--Basic HTML document-->
+<!DOCTYPE html>
+<!--laguage-->
+<html lang="en">
+<!--Browser tab name, css stylesheet & favicon-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./stylesheets/stylesheet.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Kindle Gem</title>
+</head>
+<!--Page Style-->
+<body style="background-color: rgb(62, 62, 62);">
+	<!--Setting the backgound-->
+
+	<div id="gameContainer">
+		<div class="gameElement" id="background">
+		</div>
+		<!--Canvas-->
+		<canvas class="gameElement" id="canvas" width="1272" height="896"></canvas>
+		<div class="gameElement">
+			<!--Score & Stamina-->
+			<h2 id="scoreText" style="color: aquamarine"> SCORE <div style="color: #00ff00" id="ScoreCount"></div>
+			</h2>
+			<h2 id="staminaText" style="color: aquamarine">Stamina<div style="color:crimson" id="MineStrokes"></div>
+			</h2>
+		</div>
+	</div>
+	<div id="rules">
+		<h1>Rules:</h1> 
+		<p> Stamina: <br /> Get the highest score<br /> by excavating the most gems <br />with only 35 stamina. <br /> (1 per mined Rock)</p>
+		<p> Movement:<br /> "W" to move up,<br /> "A" to move left,<br />  "S" to move down <br />"D" to move right,<br /> "Spacebar" to mine</p>
+		<p> Scoring: <br /> Enter a name to <br />personalize your score. <br />Rubies are worth 11 points <br /> Saphires are worth 22 points<br /> Emeralds are worth 34 points</p>
+<!--		<p> Optional: <br /> if browser mutes tab <br /> Unmute for sound</p> -->
+	</div>
+
+	<div id="gameOver">
+		<h1>Scores:</h1>
+		<div id="score">
+
+		</div>
+	</div>
+<!--End of HTML content-->
+</body>
+<!-- JS classes -->
+<!-- Logic -->
+<script src="gameManager.js"></script>
+
+<!-- Canvas -->
+<script src="canvas.js"></script>
+
+<!-- Game Objects -->
+<script src="gameObjects/gameObject.js"></script>
+<script src="gameObjects/imageObjects.js"></script>
+<script src="gameObjects/spriteObject.js"></script>
+<script src="gameObjects/playerFigure.js"></script>
+<script src="gameObjects/obstacle.js"></script>
+<script src="gameObjects/wall.js"></script>
+<script src="gameObjects/gem.js"></script>
+
+<!-- Setup & Animations-->
+<script src="setup/stageSetup.js"></script>
+<script src="setup/inputHandling.js"></script>
+
+</html>
